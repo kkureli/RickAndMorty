@@ -1,4 +1,4 @@
-# Rick And Mortyh Characters List App
+# Rick And Morty Characters List App
 
 ### Project info
 
