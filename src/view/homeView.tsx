@@ -22,7 +22,7 @@ const HomeView = () => {
   );
   const [searchInput, setSearchInput] = useState('');
   const [debounceResult, setDebounceResult] = useState('');
-  const [loadMore, setLoadMore] = useState(false); //State to manage Flatlist footer loading indicator
+  const [loadMore, setLoadMore] = useState(true); //State to manage Flatlist footer loading indicator
   const [isFilterApplied, setIsFilterApplied] = useState(false);
   const [selectedStatus, setSelectedStatus] = useState<
     keyof typeof StatusEnum | null
@@ -34,7 +34,7 @@ const HomeView = () => {
 
   useEffect(() => {
     if (info?.next) {
-      setLoadMore(false); //To show Flatlist footer loading indicator
+      setLoadMore(true); //To show Flatlist footer loading indicator
     }
   }, [info]);
 
@@ -85,7 +85,7 @@ const HomeView = () => {
           setCharactersList,
           setInfo,
         });
-      !nextPage && setLoadMore(true); //hide Flatlist footer loading indicator
+      !nextPage && setLoadMore(false); //hide Flatlist footer loading indicator
     }
   };
 
@@ -105,7 +105,7 @@ const HomeView = () => {
       />
 
       <FlatList
-        ListFooterComponent={!loadMore ? <ActivityIndicator /> : <></>}
+        ListFooterComponent={loadMore ? <ActivityIndicator /> : <></>}
         onEndReached={fetchMore}
         key={selectedDisplayMode === DisplayModeEnum.GRID ? 2 : 1}
         numColumns={selectedDisplayMode === DisplayModeEnum.GRID ? 2 : 1}
