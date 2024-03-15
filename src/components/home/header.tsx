@@ -10,6 +10,8 @@ type Props = {
 };
 
 const Header = (props: Props) => {
+  const {displayMode, setSelectedDisplayMode} = props;
+
   const changeDisplayMode = () => {
     if (displayMode === DisplayModeEnum.GRID) {
       setSelectedDisplayMode(DisplayModeEnum.LIST);
@@ -18,7 +20,6 @@ const Header = (props: Props) => {
     }
   };
 
-  const {displayMode, setSelectedDisplayMode} = props;
   return (
     <View style={styles.header}>
       <TouchableOpacity
