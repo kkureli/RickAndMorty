@@ -2,14 +2,14 @@ import {StyleSheet, TextInput} from 'react-native';
 import React, {useCallback} from 'react';
 import _ from 'lodash';
 
-type Props = {
+export type InputProps = {
   debounceMiliSeconds?: number;
   value: string;
   onChangeText: (value: any, event?: any) => void;
   handleChangeDebounce: (value: any, event?: any) => void;
 };
 
-const SearchInput = (props: Props) => {
+const SearchInput = (props: InputProps) => {
   const {
     debounceMiliSeconds = 600,
     onChangeText,

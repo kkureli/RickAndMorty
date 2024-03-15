@@ -1,12 +1,12 @@
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React, {useContext, useEffect, useState} from 'react';
 import {CharacterType} from '../../types/character.type';
-import HttpClient from '../../api/httpclient';
 import {Episode} from '../../types/episode.type';
 import LoadingSpinner from '../common/loadingSpinner';
 import BookmarkIcon from '../../assets/svg/BookmarkIcon';
 import {FavoritesContext} from '../../context/favoritesProvider';
 import BookmarkFilledIcon from '../../assets/svg/BookmarkFilledIcon';
+import services from '../../api/services';
 
 type Props = {
   item: CharacterType;
@@ -26,23 +26,12 @@ const DetailsCard = (props: Props) => {
     useContext(FavoritesContext);
   const isFavoritedPreviously = favoritedCharacters.find(e => e.id === item.id);
 
-  const getEpisodeDetail = async () => {
-    try {
-      setLoading(true);
-      const data: Episode = await HttpClient.Get(`episode/${episodeId}`);
-      setEpisodeDetails(data);
-    } catch (error) {
-      //error handling
-    } finally {
-      setTimeout(() => {
-        setLoading(false);
-      }, 500);
-    }
-  };
-
   useEffect(() => {
-    getEpisodeDetail();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    services.getEpisodeDetail({
+      episodeId,
+      setEpisodeDetails,
+      setLoading,
+    });
   }, [episodeId]);
 
   const onAddFavorite = () => {
