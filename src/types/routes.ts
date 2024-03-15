@@ -5,6 +5,7 @@ import {CharacterType} from './character.type';
 export type RootStackParamsList = {
   [ScreenNames.HOME]: undefined;
   [ScreenNames.DETAIL]: DetailScreenProps;
+  [ScreenNames.FAVORITES]: undefined;
 };
 
 export type ScreenType = {

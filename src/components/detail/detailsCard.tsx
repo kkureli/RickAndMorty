@@ -51,7 +51,7 @@ const DetailsCard = (props: Props) => {
       setFavoritedCharacters(filteredIds || []);
     } else {
       setFavoritedCharacters(prev =>
-        prev ? [...prev, {id: item.id}] : [{id: item.id}],
+        prev ? [...prev, {...item}] : [{...item}],
       );
     }
   };
