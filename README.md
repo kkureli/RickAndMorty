@@ -6,10 +6,9 @@ The Rick and Morty Character Explorer is a React Native application developed to
 
 #### ScreenShots
 
-
-<img src="https://github.com/kkureli/RickAndMorty/assets/33238066/b8d21d8d-f2bc-499f-a71e-f3c9232f71af"  width="300" height="500" />
-<img src="https://github.com/kkureli/RickAndMorty/assets/33238066/b47c08c7-eb9b-49f0-b46c-5daf544d9ab8"  width="300" height="500" />
-<img src="https://github.com/kkureli/RickAndMorty/assets/33238066/958953db-b3f9-4bb7-bf02-851c6b425e9a"  width="300" height="500" />
+<img src="https://github.com/kkureli/RickAndMorty/assets/33238066/035b399b-4b27-4cfe-ae80-feeaac433f15"  width="300" height="500" />
+<img src="https://github.com/kkureli/RickAndMorty/assets/33238066/3f10bea0-85ec-4e46-b063-2b7cb425083e"  width="300" height="500" />
+<img src="https://github.com/kkureli/RickAndMorty/assets/33238066/b014183c-99bc-4001-9360-dbe62d5c8c7c"  width="300" height="500" />
 <img src="https://github.com/kkureli/RickAndMorty/assets/33238066/d44ae532-b725-44a4-8775-42361766a26b"  width="300" height="500" />
 
 
