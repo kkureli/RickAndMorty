@@ -71,8 +71,6 @@ const styles = StyleSheet.create({
   card: {
     marginTop: 15,
     flexDirection: 'row',
-    borderBottomWidth: 1,
-    borderBottomColor: 'silver',
     paddingBottom: 8,
   },
   gridDisplayCard: {
@@ -80,8 +78,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'space-between',
     width: itemWidth,
-    borderBottomWidth: 1,
-    borderBottomColor: 'silver',
     paddingBottom: 8,
   },
   img: {

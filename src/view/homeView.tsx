@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unstable-nested-components */
 import {ActivityIndicator, FlatList} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {CharacterType} from '../types/character.type';
@@ -10,6 +11,7 @@ import SafeContainer from '../components/common/safeContainer';
 import LoadingSpinner from '../components/common/loadingSpinner';
 import {StatusEnum} from '../types/status.type';
 import services from '../api/services';
+import Seperator from '../components/common/seperator';
 
 const HomeView = () => {
   const [loading, setLoading] = useState(false);
@@ -107,6 +109,7 @@ const HomeView = () => {
         onEndReached={fetchMore}
         key={selectedDisplayMode === DisplayModeEnum.GRID ? 2 : 1}
         numColumns={selectedDisplayMode === DisplayModeEnum.GRID ? 2 : 1}
+        ItemSeparatorComponent={() => <Seperator />}
         ListHeaderComponent={
           <ListHeader
             inputProps={{
