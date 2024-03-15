@@ -60,7 +60,11 @@ const CharacterCard = (props: Props) => {
         <Text style={styles.text}>Species: {species}</Text>
         <Text style={styles.text}>Status: {status}</Text>
       </View>
-      {isFavoritedPreviously && <BookmarkFilledIcon />}
+      {isFavoritedPreviously && (
+        <View style={!isGridModeSelected && styles.bookmark}>
+          <BookmarkFilledIcon />
+        </View>
+      )}
     </TouchableOpacity>
   );
 };
@@ -108,5 +112,8 @@ const styles = StyleSheet.create({
   },
   infoContainerGrid: {
     justifyContent: 'space-between',
+  },
+  bookmark: {
+    marginLeft: 8,
   },
 });
