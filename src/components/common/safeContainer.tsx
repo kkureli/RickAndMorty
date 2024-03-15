@@ -19,6 +19,7 @@ export default SafeContainer;
 const styles = StyleSheet.create({
   safeContainer: {
     flex: 1,
+    backgroundColor: 'white',
   },
-  container: {flex: 1, padding: 24},
+  container: {flex: 1, padding: 24, paddingBottom: 0},
 });
