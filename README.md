@@ -46,7 +46,7 @@ Character List:
 
 Detail Page:
 - Shows detailed information about a character, including name, status, image, species, number of episodes, gender, origin location, last known location, and last seen episode.
-- Offers the option to favorite characters for quick access, with local storage support.
+- Offers the option to favorite characters for quick access.
 
 ### Testing
 
