@@ -22,7 +22,7 @@ AxiosInstance.interceptors.request.use(
     if (__DEV__) {
       console.log('>>>REQUEST ERROR', {error});
     }
-    Alert.alert('Something went wrong');
+    Alert.alert('Something went wrong ', error?.response?.data?.error);
     return Promise.reject(error);
   },
 );
@@ -38,7 +38,7 @@ AxiosInstance.interceptors.response.use(
     if (__DEV__) {
       console.log('>>>RESPONSE ERROR', {error});
     }
-    Alert.alert('Something went wrong');
+    Alert.alert('Something went wrong ', error?.response?.data?.error);
     return Promise.reject(error);
   },
 );
