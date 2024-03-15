@@ -35,7 +35,6 @@ const TabNavigation = () => {
         options={{
           headerShown: false,
           tabBarLabel: 'Home',
-          // eslint-disable-next-line react/no-unstable-nested-components
         }}
       />
       <Tab.Screen
