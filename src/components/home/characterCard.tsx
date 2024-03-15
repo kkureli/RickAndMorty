@@ -24,12 +24,14 @@ type Props = {
   item: CharacterType;
   displayMode: DisplayModeEnum;
   index: number;
+  showBookmarked?: boolean;
 };
 
 const CharacterCard = (props: Props) => {
   const {
     item,
     item: {image, name, status, species},
+    showBookmarked = true,
     index,
   } = props;
   const imageSource: ImageSourcePropType = {uri: image};
@@ -60,7 +62,7 @@ const CharacterCard = (props: Props) => {
         <Text style={styles.text}>Species: {species}</Text>
         <Text style={styles.text}>Status: {status}</Text>
       </View>
-      {isFavoritedPreviously && (
+      {showBookmarked && isFavoritedPreviously && (
         <View style={!isGridModeSelected && styles.bookmark}>
           <BookmarkFilledIcon />
         </View>
@@ -73,9 +75,18 @@ export default CharacterCard;
 
 const styles = StyleSheet.create({
   card: {
-    marginTop: 15,
     flexDirection: 'row',
-    paddingBottom: 8,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 2,
+    borderWidth: 1,
+    borderRadius: 8,
+    borderColor: 'silver',
   },
   gridDisplayCard: {
     marginTop: 15,
@@ -88,6 +99,8 @@ const styles = StyleSheet.create({
     width: 85,
     height: 85,
     resizeMode: 'contain',
+    borderTopLeftRadius: 8,
+    borderBottomLeftRadius: 8,
   },
   name: {
     fontFamily: 'Mulish',

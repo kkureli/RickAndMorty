@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    marginBottom: 14,
   },
   listHeaderFilters: {
     flexDirection: 'row',

@@ -123,6 +123,7 @@ const HomeView = () => {
             }}
           />
         }
+        showsVerticalScrollIndicator={false}
         data={charactersList}
         keyExtractor={item => String(item.id)}
         renderItem={({item, index}) => (
