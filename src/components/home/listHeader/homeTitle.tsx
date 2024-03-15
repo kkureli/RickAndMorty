@@ -2,7 +2,7 @@ import {StyleSheet, Text} from 'react-native';
 import React from 'react';
 
 const Title = () => {
-  return <Text style={styles.title}>Movie List</Text>;
+  return <Text style={styles.title}>Characters List</Text>;
 };
 
 export default Title;
