@@ -53,7 +53,10 @@ const CharacterCard = (props: Props) => {
       testID={`character-card-${index + 1}`}
       onPress={onCardPress}
       style={isGridModeSelected ? styles.gridDisplayCard : styles.card}>
-      <Image source={imageSource} style={styles.img} />
+      <Image
+        source={imageSource}
+        style={isGridModeSelected ? styles.gridImg : styles.img}
+      />
       <View
         style={
           isGridModeSelected ? styles.infoContainerGrid : styles.infoContainer
@@ -101,6 +104,11 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     borderTopLeftRadius: 8,
     borderBottomLeftRadius: 8,
+  },
+  gridImg: {
+    width: 85,
+    height: 85,
+    resizeMode: 'contain',
   },
   name: {
     fontFamily: 'Mulish',
