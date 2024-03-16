@@ -4,7 +4,7 @@
 
 The Rick and Morty Character Explorer is a React Native application developed to list and display details of characters from the popular TV show "Rick and Morty." Users can explore various characters, view their details, and favorite them.
 
-
+### Screenshots
 
 <img src="https://github.com/kkureli/RickAndMorty/assets/33238066/6aafcedd-bb8b-41bd-a356-a3d407b72800"  width="300" height="550" />
 <img src="https://github.com/kkureli/RickAndMorty/assets/33238066/3f10bea0-85ec-4e46-b063-2b7cb425083e"  width="300" height="550" />
