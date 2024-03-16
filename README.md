@@ -32,7 +32,6 @@ In project directory:
   - `context`: This folder contains favorites provider.
   - `assets`: Asset folder to store all images and icons.
   - `components`: Folder to store any common component that use through app
-  - `data`: Folder to store any kind of constant.
   - `navigation`: Folder to store the navigators.
   - `screens`: Folder that contains all application screens.
   - `views`: Folder that contains all application views.
